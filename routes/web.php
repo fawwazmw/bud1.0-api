@@ -4,10 +4,15 @@ use App\Livewire\Settings\Appearance;
 use App\Livewire\Settings\Password;
 use App\Livewire\Settings\Profile;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Redirect; // <-- Tambahkan import ini
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('home');
+// Route::get('/', function () { // <-- Baris lama
+//     return view('welcome');
+// })->name('home');
+
+Route::get('/', function () { // <-- Baris baru
+    return Redirect::to('/admin'); // Redirect ke panel admin Filament
+})->name('home'); // Nama route 'home' tetap dipertahankan jika Anda membutuhkannya
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])

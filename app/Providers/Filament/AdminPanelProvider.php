@@ -30,7 +30,7 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Amber, // Anda bisa mengganti warna tema
                 // 'gray' => Color::Slate,
             ])
-            ->brandName('IoT Dashboard Saya') // Nama Dashboard Anda
+            ->brandName('BUD 1.0 Dashboard') // Nama Dashboard Anda
             // ->favicon(asset('images/custom-favicon.png')) // Jika punya favicon kustom
 
             // Menemukan Resources, Pages, dan Widgets secara otomatis dari direktori standar
